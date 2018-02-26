@@ -1,16 +1,20 @@
 <html>
 <head>
   <script src="js/jquery.js"></script>
+  <script src="js/bricklayer.min.js"></script>
   <script src="js/popup.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bricklayer.min.css">
   <link rel="stylesheet" type="text/css" href="css/popup.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/font.css">
+  <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
   <link rel="shortcut icon" type="image/png" href="/icon/icon.png"/>
   <title>OpenGenus: World's first Offline Search Engine</title>
   <meta charset='utf-8'>
 </head>
  
 <body>
+
   <div class="container">
         <br>
         <div class="row">
@@ -21,39 +25,64 @@
 
             <div class="col-sm-4">
                     <div class="input-group">
-                        <input id="search" class="form-control text-center" type="search" size="128" placeholder="Search any code; Try: sorting">
+                        <input id="inputSearch" class="form-control" placeholder="    Search any code">
+                        <div id="search"><i class="fa fa-search"></i></div> 
                     </div>
-			<div id="pop-tags"></div>
+            </div>
+            
+            <div class="col-sm-4">
+
+                  <a class="btn float-right" target="_blank" id="help" href="javascript:void(0)">Help</a>
+
+                  <a class="btn float-right" target="_blank" id="favButton" href="javascript:void(0)">Favorites</a>
+
+                  <a class="btn float-right" target="_blank" title="Works only when you are online" href="https://github.com/OpenGenus/quark">GitHub</a>
+                  
             </div>
 
-            <div class="col-sm-4">
-                  <a class="btn float-right" target="_blank" title="Works only when you are online" href="https://github.com/OpenGenus/quark">GitHub</a>
-            </div>
+            <div id="pop-tags"></div>
+
 
         </div><br>
 
+  </div>
+
+  <div id="front">
+      <h1 style="text-align: center;">World's first Offline Search Engine</h1>
+      <hr>
+      
+      <img id="fact" src="image/1.jpg" alt="Enjoy our daily code fact" style="width:50vw; height:50vh; position: relative; left: 50%; transform: translate(-50%, 0%);"/>
+
+      <hr>
+  </div>
+
+  <div id="no_of_results"></div>
+    
+  <div class="bricklayer" id="bl"></div>
+    
+  <div id="error-message" class="row"></div>
+     
+  <div id="favorites"></div> 
+
+  <footer class="footer">
+  <div class="container">
+        <span class="text-muted">Built with ❤ @<a target="_blank" title="Works only when you are online" href="https://github.com/OpenGenus/">OpenGenus</a> 
+        Email: <a target="_blank" title="Works offline if email app enabled" href="mailto:team@opengenus.org"> 📬 team@opengenus.org</a></span>
+        <span class="text-muted float-right">Maintained by and part of the <a target="_blank" title="Works only when you are online" href="http://www.opengenus.org/"> 👪 OpenGenus Foundation</a></span>
+  </div>
+  </footer>
+
+  <div id="help_popup">
+      <div id="popup">
+      <form action="#" id="form" method="post" name="form">
+      <img id="close" src="image/12.png" >
+      <h2>Welcome to Quark!</h2>
+      <hr>
+      <h6>This is the World's first offline code Search Engine presented by <a target="_blank" title="Works only when you are online" href="https://github.com/OpenGenus/">OpenGenus</a>. <br> <br> Now search code for any algorithm or data-structure in your favorite language even when you are not connected to the internet! <br> <br> Add frequently visited codes easily to your favorites by clicking on the star icon. <br> <br> Have any suggestions? Feel free to share your valuable feedback at this <a target="_blank" title="Works only when you are online" href="https://discourse.opengenus.org/t/feedback-for-quark/125">Discourse topic</a>!  <br> <br> </h6>
+      </form>
+      </div>
     </div>
 
-    <div id="front">
-	    <h1 style="text-align: center;">World's first Offline Search Engine</h1>
-	    <hr>
-	    
-	    <img id="fact" src="image/1.jpg" alt="Enjoy our daily code fact" style="width:50vw; height:50vh; position: relative; left: 50%; transform: translate(-50%, 0%);"/>
-
-	    <hr>
-	</div>
-
-    <div id="no_of_results"></div>
-
-    <div id="bookmarks"></div>
-
-    <footer class="footer">
-        <div class="container">
-              <span class="text-muted">Built with ❤ @<a target="_blank" title="Works only when you are online" href="https://github.com/OpenGenus/">OpenGenus</a> 
-              Email: <a target="_blank" title="Works offline if email app enabled" href="mailto:team@opengenus.org"> 📬 team@opengenus.org</a></span>
-              <span class="text-muted float-right">Maintained by and part of the <a target="_blank" title="Works only when you are online" href="http://www.opengenus.org/"> 👪 OpenGenus Foundation</a></span>
-        </div>
-    </footer>
 
 </body>
 </html>
